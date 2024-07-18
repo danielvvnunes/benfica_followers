@@ -142,7 +142,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen">
+    <div className="h-screen flex flex-col items-center justify-center">
       {isLoading ? (
         <div>Loading...</div>
       ) : (
@@ -173,7 +173,7 @@ const App = () => {
 
             <Typography
               gutterBottom
-              variant="h5"
+              variant="h4"
               component="div"
               className="sm:hidden"
             >
@@ -198,7 +198,7 @@ const App = () => {
                     {player1 && player1.name}
                   </Typography>
                   {isClicked && (
-                    <Typography variant="h3" color="text.secondary">
+                    <Typography variant="h5" color="text.secondary">
                       {player1 && (
                         <CountUp end={player1.followers} duration={3} />
                       )}
@@ -223,7 +223,7 @@ const App = () => {
                     {player2 && player2.name}
                   </Typography>
                   {isClicked && (
-                    <Typography variant="h3" color="text.secondary">
+                    <Typography variant="h5" color="text.secondary">
                       {player2 && (
                         <CountUp end={player2.followers} duration={3} />
                       )}

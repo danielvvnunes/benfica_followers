@@ -161,14 +161,28 @@ const App = () => {
             </div>
           )}
 
-          <div className="w-full p-9 flex justify-center text-center">
-            <Typography gutterBottom variant="h2" component="div">
+          <div className="w-full p-6 flex justify-center text-center">
+            <Typography
+              gutterBottom
+              variant="h2"
+              component="div"
+              className="hidden sm:block md:block lg:block xl:block"
+            >
+              Who has more followers?
+            </Typography>
+
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="div"
+              className="sm:hidden"
+            >
               Who has more followers?
             </Typography>
           </div>
 
-          <div className="flex flex-col md:flex-row w-full items-center justify-center gap-4">
-            <Card sx={{ maxWidth: 345 }} className="h-100">
+          <div className="flex w-full  justify-center gap-4">
+            <Card className="max-w-40 min-h-44 md:max-w-96">
               <CardActionArea
                 onClick={() => {
                   handleClick(player1, player2);
@@ -193,7 +207,7 @@ const App = () => {
                 </CardContent>
               </CardActionArea>
             </Card>
-            <Card sx={{ maxWidth: 345 }} className="h-100">
+            <Card className="max-w-40 md:max-w-96 min-h-44">
               <CardActionArea
                 onClick={() => {
                   handleClick(player2, player1);

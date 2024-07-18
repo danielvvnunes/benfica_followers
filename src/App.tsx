@@ -142,11 +142,11 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex flex-col h-screen justify-center p-4">
+        <div className="flex flex-col md:h-screen justify-center p-4">
           {hasResult && (
             <div
               className={`${
@@ -160,6 +160,7 @@ const App = () => {
               )}
             </div>
           )}
+
           <div className="w-full p-9 flex justify-center text-center">
             <Typography gutterBottom variant="h2" component="div">
               Who has more followers?

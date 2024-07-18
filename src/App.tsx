@@ -151,7 +151,7 @@ const App = () => {
             <div
               className={`${
                 isRight ? "bg-lime-400" : "bg-red-400"
-              } h-20 w-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  z-30 absolute flex justify-center items-center`}
+              } h-20 w-20 top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 rounded-full  z-30 absolute flex justify-center items-center`}
             >
               {isRight ? (
                 <CheckIcon fontSize="large" className="text-white" />

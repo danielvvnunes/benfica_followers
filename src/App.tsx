@@ -146,7 +146,7 @@ const App = () => {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex flex-col md:h-screen justify-center p-4">
+        <div className="flex flex-col justify-center p-4">
           {hasResult && (
             <div
               className={`${

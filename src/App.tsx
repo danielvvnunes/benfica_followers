@@ -142,7 +142,7 @@ const App = () => {
   };
 
   return (
-    <div className="h-screen overflow-hidden flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       {isLoading ? (
         <div>Loading...</div>
       ) : (

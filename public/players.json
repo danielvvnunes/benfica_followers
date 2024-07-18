@@ -1,0 +1,77 @@
+[
+  {
+    "name": "João Neves",
+    "image": "/public/joao_neves.jpg",
+    "followers": 418000
+  },
+  {
+    "name": "Cardozo",
+    "image": "/public/cardozo.png",
+    "followers": 208000
+  },
+  {
+    "name": "Aimar",
+    "image": "/public/aimar.png",
+    "followers": 340000
+  },
+  {
+    "name": "Gaitan",
+    "image": "/public/gaitan.png",
+    "followers": 523000
+  },
+  {
+    "name": "Everton",
+    "image": "/public/everton.png",
+    "followers": 2400000
+  },
+  {
+    "name": "Ederson",
+    "image": "/public/ederson.png",
+    "followers": 5200000
+  },
+  {
+    "name": "Rúben Dias",
+    "image": "/public/ruben_dias.png",
+    "followers": 3900000
+  },
+  {
+    "name": "Bernardo Silva",
+    "image": "/public/bernardo_silva.png",
+    "followers": 4800000
+  },
+  {
+    "name": "João Cancelo",
+    "image": "/public/joao_cancelo.png",
+    "followers": 7100000
+  },
+  {
+    "name": "Rafa Silva",
+    "image": "/public/rafa_silva.png",
+    "followers": 640000
+  },
+  {
+    "name": "Renato Sanches",
+    "image": "/public/renato_sanches.png",
+    "followers": 4700000
+  },
+  {
+    "name": "Pizzi",
+    "image": "/public/pizzi.png",
+    "followers": 472000
+  },
+  {
+    "name": "Futre",
+    "image": "/public/futre.png",
+    "followers": 210000
+  },
+  {
+    "name": "João Félix",
+    "image": "/public/joao_felix.png",
+    "followers": 12700000
+  },
+  {
+    "name": "Nuno Gomes",
+    "image": "/public/nuno_gomes.png",
+    "followers": 309000
+  }
+]

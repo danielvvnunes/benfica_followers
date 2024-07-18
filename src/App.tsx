@@ -160,13 +160,13 @@ const App = () => {
               )}
             </div>
           )}
-          <div className="w-full  p-9 flex justify-center text-center">
+          <div className="w-full p-9 flex justify-center text-center">
             <Typography gutterBottom variant="h2" component="div">
               Who has more followers?
             </Typography>
           </div>
 
-          <div className="flex w-full items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row w-full items-center justify-center gap-4">
             <Card sx={{ maxWidth: 345 }} className="h-100">
               <CardActionArea
                 onClick={() => {

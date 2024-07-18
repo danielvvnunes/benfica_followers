@@ -241,7 +241,6 @@ const App = () => {
 
           <Modal
             open={isModalOpen}
-            onClose={() => {}}
             closeAfterTransition
             aria-labelledby="modal-modal-title"
             aria-describedby="modal-modal-description"

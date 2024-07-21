@@ -142,7 +142,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="min-h-[100dvh] flex flex-col items-center justify-center">
       {isLoading ? (
         <div>Loading...</div>
       ) : (

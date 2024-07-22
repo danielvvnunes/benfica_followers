@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea, Divider } from "@mui/material";
 import CountUp from "react-countup";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
@@ -142,132 +142,146 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-[100dvh] flex flex-col items-center justify-center">
+    <div className="background min-h-[100dvh] flex flex-col">
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <div className="flex flex-col justify-center p-4">
-          {hasResult && (
-            <div
-              className={`${
-                isRight ? "bg-lime-400" : "bg-red-400"
-              } h-20 w-20 top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 rounded-full  z-30 absolute flex justify-center items-center`}
-            >
-              {isRight ? (
-                <CheckIcon fontSize="large" className="text-white" />
-              ) : (
-                <CloseIcon fontSize="large" className="text-white" />
-              )}
+        <>
+          <header>
+            <div className="px-4 pt-4 flex justify-center items-center">
+              <img src="/vv_logo.png" width={200} height={200} />
             </div>
-          )}
-
-          <div className="w-full p-6 flex justify-center text-center">
-            <Typography
-              gutterBottom
-              variant="h2"
-              component="div"
-              className="hidden sm:block md:block lg:block xl:block"
-            >
-              Who has more followers?
-            </Typography>
-
-            <Typography
-              gutterBottom
-              variant="h4"
-              component="div"
-              className="sm:hidden"
-            >
-              Who has more followers?
-            </Typography>
-          </div>
-
-          <div className="flex w-full  justify-center gap-4">
-            <Card className="max-w-40 min-h-44 md:max-w-96">
-              <CardActionArea
-                onClick={() => {
-                  handleClick(player1, player2);
-                }}
+            {/* <Divider /> */}
+          </header>
+          <div className="flex flex-grow flex-col h-full items-center justify-center p-4">
+            {hasResult && (
+              <div
+                className={`${
+                  isRight ? "bg-lime-400" : "bg-red-400"
+                } h-20 w-20 top-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 rounded-full  z-30 absolute flex justify-center items-center`}
               >
-                <CardMedia
-                  component="img"
-                  height="210"
-                  image={player1 ? player1.image : undefined}
-                />
-                <CardContent className="flex justify-center text-center flex-col items-center">
-                  <Typography gutterBottom variant="h5" component="div">
-                    {player1 && player1.name}
-                  </Typography>
-                  {isClicked && (
-                    <Typography variant="h5" color="text.secondary">
-                      {player1 && (
-                        <CountUp end={player1.followers} duration={3} />
-                      )}
-                    </Typography>
-                  )}
-                </CardContent>
-              </CardActionArea>
-            </Card>
-            <Card className="max-w-40 md:max-w-96 min-h-44">
-              <CardActionArea
-                onClick={() => {
-                  handleClick(player2, player1);
-                }}
-              >
-                <CardMedia
-                  component="img"
-                  height="210"
-                  image={player2 ? player2.image : undefined}
-                />
-                <CardContent className="flex justify-center text-center flex-col items-center">
-                  <Typography gutterBottom variant="h5" component="div">
-                    {player2 && player2.name}
-                  </Typography>
-                  {isClicked && (
-                    <Typography variant="h5" color="text.secondary">
-                      {player2 && (
-                        <CountUp end={player2.followers} duration={3} />
-                      )}
-                    </Typography>
-                  )}
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </div>
-          <div className="flex items-center justify-center py-4">
-            <Typography gutterBottom variant="h5" component="div">
-              Score: {score}
-            </Typography>
-          </div>
+                {isRight ? (
+                  <CheckIcon fontSize="large" className="text-white" />
+                ) : (
+                  <CloseIcon fontSize="large" className="text-white" />
+                )}
+              </div>
+            )}
 
-          <Modal
-            open={isModalOpen}
-            closeAfterTransition
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Fade in={isModalOpen}>
-              <Box
-                className="w-100 rounded-lg flex flex-col justify-center items-center gap-3"
-                sx={style}
+            <div className="w-full p-7 flex flex-col items-center justify-center text-center">
+              <Typography
+                gutterBottom
+                variant="h2"
+                component="div"
+                className="hidden sm:block md:block lg:block xl:block"
               >
-                <Typography id="modal-modal-title" variant="h4" component="h2">
-                  Pontuação:
-                </Typography>
-                <Typography
-                  className="text-red-500"
-                  id="modal-modal-title"
-                  variant="h2"
-                  component="h2"
+                Who has more followers?
+              </Typography>
+
+              <Typography
+                gutterBottom
+                variant="h4"
+                component="div"
+                className="sm:hidden"
+              >
+                Who has more followers?
+              </Typography>
+
+              <img src="/instagram_logo.webp" width={60} height={60} />
+            </div>
+
+            <div className="flex w-full  justify-center gap-4">
+              <Card className="min-h-44 md:w-[400px] transition-transform duration-1000 ease-in-out transform  hover:scale-[102%]">
+                <CardActionArea
+                  onClick={() => {
+                    handleClick(player1, player2);
+                  }}
                 >
-                  {score}
-                </Typography>
-                <Button onClick={restartGame} variant="contained">
-                  Play again
-                </Button>
-              </Box>
-            </Fade>
-          </Modal>
-        </div>
+                  <CardMedia
+                    component="img"
+                    height="210"
+                    image={player1 ? player1.image : undefined}
+                  />
+                  <CardContent className="flex justify-center text-center flex-col items-center">
+                    <Typography gutterBottom variant="h5" component="div">
+                      {player1 && player1.name}
+                    </Typography>
+                    {isClicked && (
+                      <Typography variant="h5" color="text.secondary">
+                        {player1 && (
+                          <CountUp end={player1.followers} duration={3} />
+                        )}
+                      </Typography>
+                    )}
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+              <Card className="transition-transform duration-1000 ease-in-out transform  hover:scale-[102%] min-h-44 md:w-[400px]">
+                <CardActionArea
+                  onClick={() => {
+                    handleClick(player2, player1);
+                  }}
+                >
+                  <CardMedia
+                    component="img"
+                    height="210"
+                    image={player2 ? player2.image : undefined}
+                  />
+                  <CardContent className="flex justify-center text-center flex-col items-center">
+                    <Typography gutterBottom variant="h5" component="div">
+                      {player2 && player2.name}
+                    </Typography>
+                    {isClicked && (
+                      <Typography variant="h5" color="text.secondary">
+                        {player2 && (
+                          <CountUp end={player2.followers} duration={3} />
+                        )}
+                      </Typography>
+                    )}
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </div>
+            <div className="flex items-center justify-center py-6">
+              <Typography gutterBottom variant="h5" component="div">
+                Score: {score}
+              </Typography>
+            </div>
+
+            <Modal
+              open={isModalOpen}
+              closeAfterTransition
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Fade in={isModalOpen}>
+                <Box
+                  className="w-100 rounded-lg flex flex-col justify-center items-center gap-3"
+                  sx={style}
+                >
+                  <Typography
+                    id="modal-modal-title"
+                    variant="h4"
+                    component="h2"
+                  >
+                    Pontuação:
+                  </Typography>
+                  <Typography
+                    className="text-red-500"
+                    id="modal-modal-title"
+                    variant="h2"
+                    component="h2"
+                  >
+                    {score}
+                  </Typography>
+                  <Button onClick={restartGame} variant="contained">
+                    Play again
+                  </Button>
+                </Box>
+              </Fade>
+            </Modal>
+          </div>
+        </>
       )}
     </div>
   );

@@ -7,7 +7,7 @@ import Box from "@mui/material/Box";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import { CardActionArea, CircularProgress } from "@mui/material";
 import CountUp from "react-countup";
 import CheckIcon from "@mui/icons-material/Check";
 import CloseIcon from "@mui/icons-material/Close";
@@ -210,7 +210,9 @@ const App = () => {
   return (
     <div className="background min-h-[100dvh] flex flex-col">
       {isLoading ? (
-        <div>Loading...</div>
+        <div className="w-full min-h-[100dvh] flex justify-center items-center">
+          <CircularProgress />
+        </div>
       ) : (
         <>
           <header>
@@ -218,7 +220,7 @@ const App = () => {
               <img src="/vv_logo.png" width={200} height={200} />
             </div>
           </header>
-          <div className="flex flex-grow flex-col h-full items-center justify-center p-4">
+          <div className="flex flex-grow flex-col h-full items-center justify-center px-4">
             {hasResult && (
               <div
                 className={`${
